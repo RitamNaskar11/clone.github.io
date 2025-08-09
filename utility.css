@@ -1,5 +1,6 @@
+
 .border{
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   margin: 3px;
 }
 .flex{
@@ -13,8 +14,22 @@
 }
 
 .bg-black{
-    background-color: black;
+  background-color: #000000;
+  padding: 3px;
 }
 .invert{
     filter: invert(1);
+}
+.bg-grey{
+    background-color:rgb(32, 32, 32);
+}
+
+.rounded{
+    border-radius: 6px;
+}
+.ma-1{
+    margin: 5px;
+}
+.p-1{
+    padding: 19px
 }
