@@ -10,10 +10,15 @@
     padding: 1px;
 }
 
+.left .home ul {
+    margin-left: 5px;
+}
+
 .right {
     width: 80vw;
-
+    position: relative;
 }
+
 
 .home {}
 
@@ -22,7 +27,7 @@
     width: 15px;
     list-style: none;
     font-weight: bold;
-    gap: 4px;
+    gap: 20px;
     font-size: 20px;
     margin-top: 21px;
     font-family: "Varela Round", sans-serif;
@@ -62,9 +67,12 @@
     color: gray;
 
 }
-
+.hamburger{
+   display: none; 
+}
 
 .header {
+    height: 66px;
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
@@ -75,14 +83,56 @@
 .header>* {
     padding: 12px;
 }
-
-.buttons button {
-    padding: 13px;
-    width: 97px;
-    border-radius: 28px;
-    font-weight: 20px;
-    font-size: 18px;
+.hamburgerContainer{
+    display: flex;
+    gap: 20px;
 }
+.signbtn {
+    margin-right: 17px;
+    background-color: rgb(43, 43, 43);
+    color: rgb(186, 183, 183);
+    border: none;
+    background-color: rgb(30, 29, 29);
+    font-weight: bold;
+    font-size: 15px;
+    font-family: "Varela Round", sans-serif;
+}
+
+.signbtn:hover {
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 32px;
+    font-family:"Ubuntu", sans-serif;
+    font-weight: bold;
+
+}
+
+.logbtn {
+    padding: 10px;
+    background-color: white;
+    color: black;
+    width: 104px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 48px;
+    font-family: "Varela Round", sans-serif;
+}
+
+.logbtn:hover {
+    transform: 1.9rem ease-in;
+    cursor: pointer;
+    background-color: rgb(243, 243, 243);
+    font-size: 21px;
+}
+
 
 .playList {
     padding: 20px;
@@ -109,6 +159,11 @@
     text-align: center;
 }
 
+.playList {
+    max-height: 90vh;
+    overflow: scroll;
+}
+
 .playList .card {
 
     width: 158px;
@@ -126,18 +181,18 @@
     border-radius: 7px;
     /* display: flex; */
 }
-.card{
+
+.card {
     position: relative;
 }
 
-.play-btn{
-   position: absolute;
-    width: 40px;
-    height: 40px;
+.play-btn {
+    position: absolute;
+    width: 30px;
+    height: 30px;
     background-color: #1ed760;
     border-radius: 50%;
-    display: flex
-;
+    display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -149,13 +204,144 @@
 
 
 
-.play-btn::before{
+.play-btn::before {
     content: "";
     display: block;
     width: 0;
     height: 0;
-    border-left: 19px solid black;
-    border-top: 10px solid transparent;
+    border-left: 14px solid black;
+    border-top: 8px solid transparent;
     border-bottom: 10px solid transparent;
     margin-left: 5px;
+
+}
+
+.playbar {
+    position: fixed;
+    bottom: 9px;
+    background-color: rgb(213, 213, 213);
+    filter: invert(1);
+    height: 49px;
+    width: 63vw;
+    border-radius: 30px;
+    padding: 13px 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.spotifyBar {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.song-Info,
+.songTime {
+    color: black;
+    padding: 0px 12px;
+}
+
+.seekbar {
+    height: 4px;
+    width: 95%;
+    filter: invert(1);
+    background: rgb(186, 186, 186);
+    bottom: 8px;
+    position: absolute;
+    border-radius: 12px;
+    margin-left: 6px;
+    cursor: pointer;
+
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 13px;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    bottom: 5px;
+    left: 0%;
+
+}
+
+/* .play-btn:hover {
+    transform: scale(1.1);
+  } */
+
+.playLogo {
+    display: flex;
+
+    justify-content: center;
+    gap: 11px;
+
+
+}
+
+.songList {
+    margin-top: 10px;
+    max-height: 444px;
+    overflow: auto;
+}
+
+.songList ul {
+    padding: 10px;
+    color: white;
+}
+
+.songList ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 9px;
+    padding: 16px;
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: "Varela Round", sans-serif;
+    font-size: 10px;
+    width: 338px;
+
+}
+
+.songList ul li:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.songList img {
+    width: 20px;
+    height: 30px;
+
+}
+
+.song-details {
+    margin-right: 140px;
+    color: rgb(234, 228, 228);
+}
+
+.playLogo img {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1400px) {
+.left{
+    background-color: red;
+    position: absolute;
+    z-index: 1;
+    left: -100%;
+    width: 440px;
+    transition: all .3s;
+}
+.right{
+width: 100vw;
+}
+.playbar{
+    width: 90vw;
+}
+.hamburger{
+   display: block; 
+}
 }
