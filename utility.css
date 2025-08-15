@@ -19,6 +19,7 @@
 }
 .invert{
     filter: invert(1);
+    height: 25px;
 }
 .bg-grey{
     background-color:rgb(32, 32, 32);
@@ -33,3 +34,19 @@
 .p-1{
     padding: 19px
 }
+
+.playList {
+    scrollbar-width: thin;                
+    scrollbar-color: #a3a3a3 transparent;    
+}
+
+.songList{
+     scrollbar-width: thin;                
+    scrollbar-color: #a3a3a3 transparent; 
+    
+}
+
+
+
+
+
