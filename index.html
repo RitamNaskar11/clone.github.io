@@ -13,7 +13,7 @@
     <div class="container flex bg-black">
         <div class="left">
             <div class="home bg-grey rounded ma-1 p-1">
-                <div class="logo"><img class="invert" src="logo.svg" alt=""></div>
+                <div class="invert" id="logo"><img width="40px" src="logo.svg" alt=""> Spotify</div>
                 <ul>
                     <li class="invert"> <img src="home.svg" alt="">Home </li>
 
@@ -29,6 +29,12 @@
                         My library
                     </h2>
                 </div>
+
+                <div class="songList">
+                    <ul>
+                    </ul>
+                </div>
+
                 <div class="footer">
                     <div>
                         <a href="https://www.spotify.com/in-en/legal/">Legal</a>
@@ -57,43 +63,51 @@
         <div class="right border bg-grey rounded ma-1 ">
             <div class="header">
                 <div class="nav">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff"
-                        fill="none">
-                        <path d="M15 6C15 6 9 10.4189 9 12C9 13.5812 15 18 15 18" stroke="currentColor"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff"
-                        fill="none">
-                        <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="currentColor"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                    <div class="hamburgerContainer">
+                        <img class="invert hamburger" src="hamburger.svg" alt="">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            color="#ffffff" fill="none">
+                            <path d="M15 6C15 6 9 10.4189 9 12C9 13.5812 15 18 15 18" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            color="#ffffff" fill="none">
+                            <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+
+                        </svg>
+                    </div>
                 </div>
                 <div class="buttons">
-                    <button>Login </button>
-                    <button>Sign-Up</button>
+                    <button class="signbtn">Sign-Up</button>
+                    <button class="logbtn">Login </button>
+
                 </div>
             </div>
             <div class="playList">
                 <h2>Song PlayList</h2>
                 <div class="cardContainer">
                     <div class="card">
-                            <img src="https://i.scdn.co/image/ab67616d00001e028e001d2d4b55039b545d047e" alt="Song cover" class="cover">
-                            <button class="play-btn"></button>   
+                        <img src="https://i.scdn.co/image/ab67616d00001e028e001d2d4b55039b545d047e" alt="Song cover"
+                            class="cover">
+                        <button class="play-btn"></button>
                         <h2 class="play">Aaoge Tum Khabhi</h2>
                         <p>The Local Train</p>
                     </div>
 
                     <div class="card">
                         <img src="https://i.scdn.co/image/ab67616d00001e025635ba94dad8e7b80ae37a54" alt="">
-                          <button class="play-btn"></button> 
+                        <button class="play-btn"></button>
                         <h2 class="play">O YAARA</h2>
                         <p>Kavish PlayList</p>
 
 
                     </div>
+
                     <div class="card">
                         <img src="https://i.scdn.co/image/ab67616d00001e020b9cb672be380559d195047e" alt="">
-                          <button class="play-btn"></button> 
+                        <button class="play-btn"></button>
                         <h2 class="play">Ami Je Tomer 3.0</h2>
                         <p>This is Shreya Ghoshal playlist</p>
 
@@ -101,7 +115,7 @@
                     </div>
                     <div class="card">
                         <img src="https://i.scdn.co/image/ab67616d00001e0283141000ee8ce3b893a0b425" alt="">
-                          <button class="play-btn"></button> 
+                        <button class="play-btn"></button>
                         <h2 class="play">Finding Her </h2>
                         <p>This is playlist</p>
 
@@ -109,9 +123,32 @@
                     </div>
                     <div class="card">
                         <img src="https://i.scdn.co/image/ab67616d00001e0282549c22cd3c6e03351bd1c5" alt="">
-                          <button class="play-btn"></button> 
+                        <button class="play-btn"></button>
                         <h2 class="play">With You</h2>
                         <p>AP Dhillon PlayList</p>
+                    </div>
+
+
+                </div>
+                <div class="playbar">
+                    <div class="seekbar">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="spotifyBar">
+
+                        <div class="song-Info">
+
+                        </div>
+
+                        <div class="playLogo">
+                            <img id="previous" src="previous.svg" alt="">
+                            <img id="play" src="play.svg" alt="">
+                            <img id="next" src="next.svg" alt="">
+                        </div>
+
+                        <div class="songTime">
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -119,5 +156,6 @@
     </div>
 
 </body>
+<script src="script.js"></script>
 
 </html>
