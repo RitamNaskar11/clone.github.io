@@ -1,7 +1,4 @@
-
-
 let audio = new Audio();
-
 
 function formatTime(seconds) {
     if (isNaN(seconds) || seconds < 0) return "00:00";
@@ -120,4 +117,5 @@ async function main() {
     })
 }
 main()
+
 
