@@ -1,4 +1,7 @@
+
+
 let audio = new Audio();
+
 
 function formatTime(seconds) {
     if (isNaN(seconds) || seconds < 0) return "00:00";
@@ -115,7 +118,10 @@ async function main() {
     document.querySelector(".hamburger").addEventListener("click",()=>{
         document.querySelector(".left").style.left = "0"
     })
+    // Add an event listener for close hamburger 
+    document.querySelector(".closehamburger").addEventListener("click",()=>{
+        document.querySelector(".left").style.left = "-120%"
+    })
 }
 main()
-
 
